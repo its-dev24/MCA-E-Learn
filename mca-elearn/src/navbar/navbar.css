@@ -1,0 +1,42 @@
+:root {
+  --primary-1: #2873c9;
+}
+
+* {
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  max-width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  z-index: 100;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.navbar h1 {
+  color: var(--primary-1);
+  margin-left: 40px;
+}
+.navbar .links {
+  margin: auto;
+  margin-right: 50px;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: var(--primary-1);
+  transition: color 300ms ease-in-out;
+}
+.navbar img {
+  transform: translateY(5px);
+  height: 20px;
+}
