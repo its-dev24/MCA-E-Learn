@@ -1,9 +1,8 @@
-import React from "react";
 import CardView from "../cards/CardView";
 
-const Notes = () => {
+const CardsScreen = ({ titles }) => {
   return (
-    <div className="notes-main">
+    <div className="main">
       <div className="contents">
         <div className="cards">
           <CardView
@@ -35,4 +34,4 @@ const Notes = () => {
   );
 };
 
-export default Notes;
+export default CardsScreen;

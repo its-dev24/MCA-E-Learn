@@ -1,0 +1,26 @@
+{
+  "Semester 1": [
+    {
+      "title": "Semester 1",
+      "image": "./src/images/sem.png",
+      "Subjects": [
+        {
+          "title": "Advanced Data Structures",
+          "image": "./src/images/sem.png"
+        },
+        {
+          "title": "Advanced Software Engineering",
+          "image": "./src/images/sem.png"
+        },
+        {
+          "title": "Digital Fundamentals & Computer Architecture",
+          "image": "./src/images/sem.png"
+        },
+        {
+          "title": "Mathematical Foundation For Computing",
+          "image": "./src/images/sem.png"
+        }
+      ]
+    }
+  ]
+}

@@ -30,12 +30,12 @@
 .text {
   text-decoration: none;
   color: black;
-  font-size: 17px;
+  font-size: calc(100vh - 750px);
 }
 .Card-body a {
   text-decoration: none;
 }
 .Card-body:hover .text {
-  font-size: 20px;
+  font-size: calc(100vh - 745px);
   transition: 150ms ease-in-out;
 }

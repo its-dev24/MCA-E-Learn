@@ -7,8 +7,8 @@ const Navbar = () => {
       <nav className="navbar">
         <h1>MCA ELearn</h1>
         <div className="links">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/Notes">Notes</NavLink>
+          <NavLink to="/">{" Home"}</NavLink>
+          <NavLink to="/Notes">{" Notes"}</NavLink>
           {/* <NavLink to="/">ChatGPT(Beta)</NavLink> */}
           <NavLink to="/Notifications">
             <img src={logo} alt="Notifications" />

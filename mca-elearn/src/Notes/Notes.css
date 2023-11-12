@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.notes-main {
+  height: 100vh;
+}
+.contents {
+  margin-top: 73px;
+
+  height: 100vh;
+}
+.cards {
+  display: flex;
+  transform: translateY(calc(100vh - 700px));
+  justify-content: space-evenly;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  margin-bottom: 20px;
+}
