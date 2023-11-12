@@ -1,18 +1,29 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
 import "./App.css";
-import Navbar from "./navbar/Navbar";
+
 import UserDashboard from "./user_dashboard/UserDashboard";
+import Notes from "./Notes/Notes";
+import RootLayout from "./RootLayout/RootLayout";
+
+const myRouter = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<RootLayout />}>
+      <Route path="/" element={<UserDashboard />} />
+      <Route path="/Notes" element={<Notes />} />
+    </Route>
+  )
+);
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<UserDashboard />} />
-        </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <RouterProvider router={myRouter} />
+    </div>
   );
 }
 

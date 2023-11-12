@@ -7,9 +7,26 @@ const UserDashboard = () => {
     <div className="dashboard-main">
       <div className="contents">
         <div className="cards">
-          <CardView />
-          <CardView />
-          <CardView />
+          <CardView text="SYLLABUS" image={require("../images/syllubus.png")} />
+          <CardView text="NOTES" image={require("../images/notes.png")} />
+          <CardView
+            text="NOTIFICATIONS"
+            image={require("../images/notification-card.png")}
+          />
+        </div>
+        <div className="cards">
+          <CardView
+            text="CONTRIBUTIONS"
+            image={require("../images/contribute.png")}
+          />
+          <CardView
+            text="PLACEHOLDER"
+            image={require("../images/syllubus.png")}
+          />
+          <CardView
+            text="PLACEHOLDER"
+            image={require("../images/syllubus.png")}
+          />
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./navbar.css";
 import logo from "../images/notification.png";
 const Navbar = () => {
@@ -7,12 +7,12 @@ const Navbar = () => {
       <nav className="navbar">
         <h1>MCA ELearn</h1>
         <div className="links">
-          <Link to="/">Home</Link>
-          <Link to="/Notes">Notes</Link>
-          {/* <Link to="/">ChatGPT(Beta)</Link> */}
-          <Link to="/Notifications">
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/Notes">Notes</NavLink>
+          {/* <NavLink to="/">ChatGPT(Beta)</NavLink> */}
+          <NavLink to="/Notifications">
             <img src={logo} alt="Notifications" />
-          </Link>
+          </NavLink>
         </div>
       </nav>
     </div>

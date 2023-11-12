@@ -1,5 +1,6 @@
 :root {
   --primary-1: #2873c9;
+  --secondary-1: #ff2400;
 }
 
 * {
@@ -26,11 +27,15 @@
 .navbar .links {
   margin: auto;
   margin-right: 50px;
+  padding-bottom: 7px;
+  padding-top: 7px;
 }
 .navbar a {
   margin-left: 16px;
   text-decoration: none;
   padding: 6px;
+  border-radius: 15px;
+  padding-top: 2px;
 }
 .navbar a:hover {
   color: var(--primary-1);
@@ -39,4 +44,8 @@
 .navbar img {
   transform: translateY(5px);
   height: 20px;
+}
+.navbar a.active {
+  background-color: var(--primary-1);
+  color: white;
 }

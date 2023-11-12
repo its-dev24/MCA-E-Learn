@@ -3,7 +3,7 @@
   width: 20%;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  background-color: brown;
+
   border-radius: 5px;
   transition: 150ms ease-in-out;
 }
@@ -13,4 +13,29 @@
   cursor: pointer;
 
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card-contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+.image img {
+  height: calc(100vh - 720px);
+  transition: 150ms ease-in-out;
+}
+.Card-body:hover .image img {
+  height: calc(100vh - 700px);
+}
+.text {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+.Card-body a {
+  text-decoration: none;
+}
+.Card-body:hover .text {
+  font-size: 20px;
+  transition: 150ms ease-in-out;
 }
