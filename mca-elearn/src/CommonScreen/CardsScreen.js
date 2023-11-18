@@ -5,7 +5,7 @@ const CardsScreen = ({ titles }) => {
     <div className="main">
       <div className="contents">
         <div className="cards">
-          <CardView
+          {/* <CardView
             text="SEMESTER 1"
             image={require("../images/syllubus.png")}
           />
@@ -27,7 +27,7 @@ const CardsScreen = ({ titles }) => {
           <CardView
             text="PLACEHOLDER"
             image={require("../images/syllubus.png")}
-          />
+          /> */}
         </div>
       </div>
     </div>
