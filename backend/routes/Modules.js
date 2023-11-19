@@ -1,9 +1,12 @@
 const express = require(`express`);
-const SemesterRouter = express.Router();
+const app = express();
+const ModuleRouter = express.Router();
+const noteRouter = require(`./Notes`);
 
 //View all notes of a Semester
-SemesterRouter.get("/", (req, res) => {
-  console.log(res.json({ msg: "View all Semesters" }));
+ModuleRouter.get("/", (req, res) => {
+  console.log(res.json({ msg: "View all Modules" }));
 });
 
-module.exports = SemesterRouter;
+ModuleRouter.use(`/:ModuleNo/Notes`, noteRouter);
+module.exports = ModuleRouter;

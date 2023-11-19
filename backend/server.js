@@ -10,12 +10,12 @@ app.use(express.json());
 
 //Importing Router
 
-const noteRouter = require(`./routes/Notes`);
+const semesterRouter = require(`./routes/Semester`);
 const notificationRouter = require(`./routes/Notifications`);
 
 //Routing
-app.use(`/api/Notes`, noteRouter);
-app.use(`/api/Notifications`, notificationRouter);
+app.use(`/Semester`, semesterRouter);
+app.use(`/Notifications`, notificationRouter);
 
 //mongo connecting to DB and Listning
 mongoose
