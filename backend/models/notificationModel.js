@@ -9,7 +9,7 @@ const NotificationSchema = new Schema(
       required: true,
     },
     snippet: {
-      type: true,
+      type: String,
       required: true,
     },
     body: {

@@ -5,4 +5,3 @@ const SemesterRouter = express.Router();
 SemesterRouter.get("/", (req, res) => {
   console.log(res.json({ msg: "View all Semesters" }));
 });
- SemesterRouter.use("")

@@ -7,22 +7,22 @@ const NotesSchema = Schema({
     type: String,
     required: true,
   },
-  Semester: {
+  semester: {
     type: Number,
     required: true,
   },
-  Subject: {
+  subject: {
     type: String,
     required: true,
   },
-  Module: {
+  module: {
     type: String,
     required: true,
   },
-  File: {
+  file: {
     type: String,
     required: true,
   },
 });
 
-module.exports = mongoose.model("Note", notesSchema);
+module.exports = mongoose.model("Note", NotesSchema);
