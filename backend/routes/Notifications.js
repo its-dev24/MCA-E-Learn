@@ -1,19 +1,19 @@
 const express = require(`express`);
 const app = express();
 const NotificationRouter = express.Router();
+const {
+  addNotifications,
+  getAllNotifications,
+} = require(`../controllers/NotificationController`);
 
 //Import model
 
-const Notification = require(`../models/notificationModel`);
+//Get all notifications
 
-NotificationRouter.post("/", async (req, res) => {
-  const { title, snippet, body } = req.body;
-  try {
-    const note = await Notification.create({ title, snippet, body });
-    res.status(200).json(note);
-  } catch (err) {
-    res.json(err);
-  }
-});
+NotificationRouter.get("/", getAllNotifications);
+
+//Add NOtifications
+
+NotificationRouter.post("/", addNotifications);
 
 module.exports = NotificationRouter;
