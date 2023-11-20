@@ -10,11 +10,11 @@ app.use(express.json());
 
 //Importing Router
 
-const semesterRouter = require(`./routes/Semester`);
+const AcademicRouter = require(`./routes/AcademicRoutes`);
 const notificationRouter = require(`./routes/Notifications`);
 
 //Routing
-app.use(`/Semester`, semesterRouter);
+app.use(AcademicRouter);
 app.use(`/Notifications`, notificationRouter);
 
 //mongo connecting to DB and Listning

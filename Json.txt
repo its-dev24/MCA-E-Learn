@@ -13,3 +13,9 @@ Notification:
     "snippet":"Sem Exam Announced",
     "body":"body of Announcement"
 }
+Subjects:
+{
+    "title":"Design and Analysis of Algorithm",
+    "subjectCode":"20MCA203",
+    "semester":"3"
+}
