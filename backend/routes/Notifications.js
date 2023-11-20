@@ -1,5 +1,5 @@
 const express = require(`express`);
-const app = express();
+
 const NotificationRouter = express.Router();
 const {
   addNotifications,
@@ -15,5 +15,7 @@ NotificationRouter.get("/", getAllNotifications);
 //Add NOtifications
 
 NotificationRouter.post("/", addNotifications);
+
+//delete notifications
 
 module.exports = NotificationRouter;

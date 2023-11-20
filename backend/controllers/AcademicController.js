@@ -2,7 +2,12 @@ const Note = require(`../models/notesModel`);
 const Subject = require(`../models/subjectModel`);
 //To View notes of a particulare Semester
 const getAllNotes = async (req, res) => {
-  const notes = await Note.find({});
+  const { sem, module, sub } = req.body;
+  const notes = await Note.find({
+    semester: sem,
+    module: module,
+    subjectCode: sub,
+  });
   if (!notes) {
     return res.status(400).json({ error: "No Notes to be shown" });
   }

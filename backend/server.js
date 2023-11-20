@@ -7,6 +7,7 @@ const mongoose = require(`mongoose`);
 //parsing all body to Json
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //Importing Router
 

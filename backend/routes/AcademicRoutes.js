@@ -15,8 +15,6 @@ AcademicRouter.get(`/Notes`, getAllNotes);
 
 AcademicRouter.post("/Notes/", createNote);
 
-module.exports = AcademicRouter;
-
 //Delete a note
 
 AcademicRouter.delete("/Notes/:id");
@@ -24,3 +22,5 @@ AcademicRouter.delete("/Notes/:id");
 //Get All Subjects
 
 AcademicRouter.get("/Subjects/:semester", getAllSubjects);
+
+module.exports = AcademicRouter;
