@@ -1,0 +1,15 @@
+Notes:
+{
+    "title":"DAA 1",
+    "semester":3,
+    "subject":"DAA",
+    "module":1,
+    "file":"Dummy File"
+
+}
+Notification:
+{
+    "title":"Exam Announcement",
+    "snippet":"Sem Exam Announced",
+    "body":"body of Announcement"
+}
