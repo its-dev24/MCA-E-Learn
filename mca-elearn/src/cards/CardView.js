@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 let cardText = "PLACEHOLDER";
 
-const CardView = ({ text, image }) => {
+const CardView = ({ text, image, url }) => {
   return (
     <div className="Card-body">
-      <Link to="/Notes">
+      <Link to={url}>
         <div className="card-contents">
           <div className="image">
             <img src={image} />

@@ -2,33 +2,20 @@ import React from "react";
 import CardView from "../cards/CardView";
 
 const Notes = () => {
+  const indexes = [0, 1, 2, 3];
   return (
     <div className="notes-main">
       <div className="contents">
         <div className="cards">
-          <CardView
-            text="SEMESTER 1"
-            image={require("../images/syllubus.png")}
-          />
-          <CardView text="SEMESTER 2" image={require("../images/notes.png")} />
-          <CardView
-            text="SEMESTER 3"
-            image={require("../images/notification-card.png")}
-          />
-        </div>
-        <div className="cards">
-          <CardView
-            text="CONTRIBUTIONS"
-            image={require("../images/contribute.png")}
-          />
-          <CardView
-            text="PLACEHOLDER"
-            image={require("../images/syllubus.png")}
-          />
-          <CardView
-            text="PLACEHOLDER"
-            image={require("../images/syllubus.png")}
-          />
+          {indexes &&
+            indexes.map((data, index) => (
+              <CardView
+                key={index}
+                text={`SEMESTER ${data + 1}`}
+                Image={require("../images/sem.png")}
+                url={`/Subjects/${data + 1}`}
+              />
+            ))}
         </div>
       </div>
     </div>

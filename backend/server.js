@@ -3,11 +3,12 @@ const express = require(`express`);
 const app = express();
 require(`dotenv`).config();
 const mongoose = require(`mongoose`);
-
+const cors = require("cors");
 //parsing all body to Json
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 //Importing Router
 
