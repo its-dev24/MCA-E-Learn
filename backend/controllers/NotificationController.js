@@ -1,3 +1,4 @@
+const { mongoose } = require("mongoose");
 const Notification = require(`../models/notificationModel`);
 
 //get all notifications
@@ -24,4 +25,16 @@ const addNotifications = async (req, res) => {
 
 //Delete notifications
 
-module.exports = { addNotifications, getAllNotifications };
+const deleteNotification = async (req, res) => {
+  const { id } = req.params;
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({ error: "not a valid ID" });
+  }
+  const notification = await Notification.findOneAndDelete({ _id: id });
+  if (!notification) {
+    return res.status(404).json({ error: "no notification exist" });
+  }
+  res.status(200).json(notification);
+};
+
+module.exports = { addNotifications, getAllNotifications, deleteNotification };

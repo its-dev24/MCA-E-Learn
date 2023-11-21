@@ -6,6 +6,7 @@ const {
   createNote,
   getAllNotes,
   getAllSubjects,
+  deleteNotes,
 } = require(`../controllers/AcademicController`);
 
 //Get all notes
@@ -17,7 +18,7 @@ AcademicRouter.post("/Notes/", createNote);
 
 //Delete a note
 
-AcademicRouter.delete("/Notes/:id");
+AcademicRouter.delete("/Notes/:id", deleteNotes);
 
 //Get All Subjects
 

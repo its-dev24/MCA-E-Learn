@@ -4,6 +4,7 @@ const NotificationRouter = express.Router();
 const {
   addNotifications,
   getAllNotifications,
+  deleteNotification,
 } = require(`../controllers/NotificationController`);
 
 //Import model
@@ -17,5 +18,7 @@ NotificationRouter.get("/", getAllNotifications);
 NotificationRouter.post("/", addNotifications);
 
 //delete notifications
+
+NotificationRouter.delete("/:id", deleteNotification);
 
 module.exports = NotificationRouter;

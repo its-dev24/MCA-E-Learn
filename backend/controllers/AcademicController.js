@@ -1,3 +1,4 @@
+const { default: mongoose } = require("mongoose");
 const Note = require(`../models/notesModel`);
 const Subject = require(`../models/subjectModel`);
 //To View notes of a particulare Semester
@@ -35,6 +36,19 @@ const createNote = async (req, res) => {
 
 //To Delete Notes
 
+const deleteNotes = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({ error: "Not a valid ID" });
+  }
+  const notes = await Note.findOneAndDelete({ _id: id });
+  if (!notes) {
+    return res.status(404).json({ error: "not Such note Exist" });
+  }
+  res.status(200).json(notes);
+};
+
 //Get all Subjects
 
 const getAllSubjects = async (req, res) => {
@@ -46,4 +60,4 @@ const getAllSubjects = async (req, res) => {
   res.status(200).json(subjects);
 };
 
-module.exports = { createNote, getAllNotes, getAllSubjects };
+module.exports = { createNote, getAllNotes, getAllSubjects, deleteNotes };
