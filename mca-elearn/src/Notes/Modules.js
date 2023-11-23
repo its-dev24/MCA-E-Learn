@@ -1,43 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CardView from "../cards/CardView";
-import axios from "axios";
-import { useParams } from "react-router-dom";
-const Subjects = () => {
-  const [subjects, setSubjects] = useState(null);
-  const { semester } = useParams();
-  console.log(semester);
-  const apiUrl = `http://localhost:5000/Subjects/${semester}`;
-  console.log(apiUrl);
-  useEffect(() => {
-    const fetchSubjects = async () => {
-      const response = await axios.get(apiUrl);
-      if (response.status === 200) {
-        const subjectObj = response.data;
-        console.log(subjectObj);
-        setSubjects(subjectObj);
-      }
-    };
-    fetchSubjects();
-  }, []);
 
+const Module = () => {
+  const img = require("../images/module.png");
+  const indexes = [0, 1, 2, 3, 4];
   return (
     <div className="notes-main">
       <div className="contents">
         <div className="cards">
-          {subjects &&
-            subjects.map((data, index) => (
+          {indexes &&
+            indexes.map((data, index) => (
               <CardView
                 key={index}
-                text={`${data.title}`}
-                Image={require("../images/sem.png")}
-                url={`/Subjects/`}
+                text={`MODULE ${data + 1}`}
+                image={img}
+                url={`/Subjects/${data + 1}`}
               />
-            ))
-            }
+            ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default Subjects;
+export default Module;

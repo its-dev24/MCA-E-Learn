@@ -11,14 +11,12 @@ const UserDashboard = () => {
           <CardView
             text="NOTES"
             image={require("../images/notes.png")}
-            url="/Notes"
+            url="/Semester"
           />
           <CardView
             text="NOTIFICATIONS"
             image={require("../images/notification-card.png")}
           />
-        </div>
-        <div className="cards">
           <CardView
             text="CONTRIBUTIONS"
             image={require("../images/contribute.png")}

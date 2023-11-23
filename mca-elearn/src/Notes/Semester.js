@@ -1,7 +1,8 @@
 import React from "react";
 import CardView from "../cards/CardView";
 
-const Notes = () => {
+const Semester = () => {
+  const img = require("../images/sem.png");
   const indexes = [0, 1, 2, 3];
   return (
     <div className="notes-main">
@@ -12,7 +13,7 @@ const Notes = () => {
               <CardView
                 key={index}
                 text={`SEMESTER ${data + 1}`}
-                Image={require("../images/sem.png")}
+                image={img}
                 url={`/Subjects/${data + 1}`}
               />
             ))}
@@ -22,4 +23,4 @@ const Notes = () => {
   );
 };
 
-export default Notes;
+export default Semester;

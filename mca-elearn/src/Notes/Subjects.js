@@ -29,7 +29,7 @@ const Subjects = () => {
               <CardView
                 key={index}
                 text={`${data.title}`}
-                Image={require("../images/sem.png")}
+                image={require("../images/subject.png")}
                 url={`/Modules`}
               />
             ))}

@@ -7,16 +7,19 @@ import {
 import "./App.css";
 
 import UserDashboard from "./user_dashboard/UserDashboard";
-import Notes from "./Notes/Notes";
+
 import RootLayout from "./RootLayout/RootLayout";
 import Subjects from "./Notes/Subjects";
+import Semester from "./Notes/Semester";
+import Module from "./Notes/Modules";
 
 const myRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<UserDashboard />} />
-      <Route path="/Notes" element={<Notes />} />
+      <Route path="/Semester" element={<Semester />} />
       <Route path="/Subjects/:semester" element={<Subjects />} />
+      <Route path="/Modules" element={<Module />} />
     </Route>
   )
 );
