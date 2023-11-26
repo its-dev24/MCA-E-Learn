@@ -12,6 +12,7 @@ import RootLayout from "./RootLayout/RootLayout";
 import Subjects from "./Notes/Subjects";
 import Semester from "./Notes/Semester";
 import Module from "./Notes/Modules";
+import Contributions from "./Notes/Contributions";
 
 const myRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const myRouter = createBrowserRouter(
       <Route path="/Semester" element={<Semester />} />
       <Route path="/Subjects/:semester" element={<Subjects />} />
       <Route path="/Modules" element={<Module />} />
+      <Route path="/Contributions" element={<Contributions />} />
     </Route>
   )
 );

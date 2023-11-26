@@ -20,6 +20,7 @@ const UserDashboard = () => {
           <CardView
             text="CONTRIBUTIONS"
             image={require("../images/contribute.png")}
+            url={"/Contributions"}
           />
           <CardView
             text="PLACEHOLDER"
