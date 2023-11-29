@@ -1,6 +1,11 @@
 const { default: mongoose } = require("mongoose");
 const Note = require(`../models/notesModel`);
 const Subject = require(`../models/subjectModel`);
+
+const Temp = require("../models/tempNotes");
+
+//Setting up multer
+
 //To View notes of a particulare Semester
 const getAllNotes = async (req, res) => {
   const { sem, module, sub } = req.body;
@@ -33,7 +38,28 @@ const createNote = async (req, res) => {
     res.status(400).json(error);
   }
 };
+//To add temp notes
 
+const createTempNote = async (req, res) => {
+  // console.log(req.file);
+  // console.log(req.body);
+
+  const { title, semester, subjectCode, module } = req.body;
+  const file = req.file.originalname;
+  // console.log(file, title, semester, subjectCode, module);
+  try {
+    const note = await Temp.create({
+      title,
+      semester,
+      subjectCode,
+      module,
+      file,
+    });
+    res.status(200).json(note);
+  } catch (error) {
+    res.status(400).json(error);
+  }
+};
 //To Delete Notes
 
 const deleteNotes = async (req, res) => {
@@ -60,4 +86,10 @@ const getAllSubjects = async (req, res) => {
   res.status(200).json(subjects);
 };
 
-module.exports = { createNote, getAllNotes, getAllSubjects, deleteNotes };
+module.exports = {
+  createNote,
+  getAllNotes,
+  getAllSubjects,
+  deleteNotes,
+  createTempNote,
+};

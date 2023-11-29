@@ -2,20 +2,23 @@ import React from "react";
 import "./Contributions.css";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 const Contributions = () => {
+  const navigate = useNavigate();
   const [sem, setSem] = useState(" ");
   const [module, setModule] = useState(" ");
   const [title, setTitle] = useState(" ");
   const [currSub, setCurrSub] = useState(" ");
   const [subjects, setSubjects] = useState(null);
+  const [files, setFiles] = useState();
 
-  const notes = {
-    title: title,
-    semester: sem,
-    module: module,
-    subjectCode: currSub,
-    file: "file",
-  };
+  // const notes = {
+  //   title: title,
+  //   semester: sem,
+  //   module: module,
+  //   subjectCode: currSub,
+  // };
+
   const getSubject = (semster) => {
     const url = `http://localhost:5000/Subjects/${semster}`;
     const fetchSubjects = async () => {
@@ -28,13 +31,37 @@ const Contributions = () => {
     };
     fetchSubjects();
   };
-  const handlePrint = () => {
-    alert(notes.currSub);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formdata = {
+      title,
+      semester: sem,
+      module,
+      subjectCode: currSub,
+      files,
+    };
+    console.log();
+    // console.log(fileData.get("file"));
+    const respose = await axios
+      .post("http://localhost:5000/TempNotes/", formdata, {
+        headers: { "Content-Type": "multipart/form-data" },
+      })
+      .then(() => {
+        if (respose.status === 200) {
+          console.log("Added to temp notes");
+        }
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    console.log(formdata);
+    navigate("/");
   };
   return (
     <div className="contribution-main">
       <div className="contribution-contents">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="title element">
             <label>TITLE</label>
             <input
@@ -105,21 +132,16 @@ const Contributions = () => {
             <label>NOTE:</label>
             <input
               type="file"
-              name="note"
-              id="note"
+              name="file"
+              id="file"
+              accept="application/pdf"
               onChange={(e) => {
-                console.log(notes);
+                setFiles(e.target.files[0]);
               }}
             />
           </div>
           <div className="button-submit">
-            <button
-              onClick={() => {
-                handlePrint();
-              }}
-            >
-              SUBMIT
-            </button>
+            <button type="submit">SUBMIT</button>
           </div>
         </form>
       </div>
