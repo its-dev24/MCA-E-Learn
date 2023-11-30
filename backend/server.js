@@ -10,6 +10,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
+//set file as static
+app.use("/files", express.static("files"));
+
 //Importing Router
 
 const AcademicRouter = require(`./routes/AcademicRoutes`);

@@ -8,11 +8,12 @@ const Temp = require("../models/tempNotes");
 
 //To View notes of a particulare Semester
 const getAllNotes = async (req, res) => {
-  const { sem, module, sub } = req.body;
+  const { semester, module, subjectCode } = req.query;
+  console.log(semester, module, subjectCode);
   const notes = await Note.find({
-    semester: sem,
+    semester: semester,
     module: module,
-    subjectCode: sub,
+    subjectCode: subjectCode,
   });
   if (!notes) {
     return res.status(400).json({ error: "No Notes to be shown" });

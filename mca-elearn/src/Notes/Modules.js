@@ -1,7 +1,10 @@
 import React from "react";
 import CardView from "../cards/CardView";
+import { useParams } from "react-router-dom";
 
 const Module = () => {
+  const { semester, subjectCode } = useParams();
+  console.log(semester, subjectCode);
   const img = require("../images/module.png");
   const indexes = [0, 1, 2, 3, 4];
   return (
@@ -14,7 +17,7 @@ const Module = () => {
                 key={index}
                 text={`MODULE ${data + 1}`}
                 image={img}
-                url={`/Subjects/${data + 1}`}
+                url={`/Notes/${semester}/${subjectCode}/${data + 1}`}
               />
             ))}
         </div>

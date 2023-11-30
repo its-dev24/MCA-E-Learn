@@ -13,7 +13,7 @@ const Subjects = () => {
       const response = await axios.get(apiUrl);
       if (response.status === 200) {
         const subjectObj = response.data;
-        console.log(subjectObj);
+        // console.log(subjectObj);
         setSubjects(subjectObj);
       }
     };
@@ -30,7 +30,7 @@ const Subjects = () => {
                 key={index}
                 text={`${data.title}`}
                 image={require("../images/subject.png")}
-                url={`/Modules`}
+                url={`/Modules/${semester}/${data.subjectCode}`}
               />
             ))}
         </div>

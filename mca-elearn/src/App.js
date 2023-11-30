@@ -13,6 +13,7 @@ import Subjects from "./Notes/Subjects";
 import Semester from "./Notes/Semester";
 import Module from "./Notes/Modules";
 import Contributions from "./Notes/Contributions";
+import Notes from "./Notes/Notes";
 
 const myRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -20,7 +21,8 @@ const myRouter = createBrowserRouter(
       <Route index element={<UserDashboard />} />
       <Route path="/Semester" element={<Semester />} />
       <Route path="/Subjects/:semester" element={<Subjects />} />
-      <Route path="/Modules" element={<Module />} />
+      <Route path="/Modules/:semester/:subjectCode" element={<Module />} />
+      <Route path="/Notes/:semester/:subjectCode/:module" element={<Notes />} />
       <Route path="/Contributions" element={<Contributions />} />
     </Route>
   )
