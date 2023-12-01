@@ -17,10 +17,12 @@ app.use("/files", express.static("files"));
 
 const AcademicRouter = require(`./routes/AcademicRoutes`);
 const notificationRouter = require(`./routes/Notifications`);
+const AdminRouter = require(`./routes/AdminRoutes`);
 
 //Routing
 app.use(AcademicRouter);
 app.use(`/Notifications`, notificationRouter);
+app.use(AdminRouter);
 
 //mongo connecting to DB and Listning
 mongoose

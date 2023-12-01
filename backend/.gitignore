@@ -1,4 +1,4 @@
 #misc
-.env.local
+.env
 files
 /node_modules
