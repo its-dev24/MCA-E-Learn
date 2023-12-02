@@ -28,12 +28,14 @@
 .adminnavbar a {
   margin-left: 16px;
   text-decoration: none;
-  padding: 6px;
+  padding: 8px;
   border-radius: 15px;
   padding-top: 2px;
+  background-color: var(--primary-1);
+  color: white;
 }
 .adminnavbar a:hover {
-  color: var(--primary-1);
+  color: gold;
   transition: color 300ms ease-in-out;
 }
 .adminnavbar img {

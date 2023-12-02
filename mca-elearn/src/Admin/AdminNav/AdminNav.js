@@ -5,14 +5,14 @@ const AdminNav = () => {
   return (
     <div>
       <nav className={AdminNavCss.adminnavbar}>
-        <h1>MCA ELearn</h1>
+        <h1>MCA ELearn | ADMIN</h1>
         <div className={AdminNavCss.adminlinks}>
-          {/* <NavLink to="/">{" Home"}</NavLink>
-          <NavLink to="/Notes">{" placeholder"}</NavLink>
+          <NavLink to="/adminhome">{" Home"}</NavLink>
+          {/* <NavLink to="/Notes">{" placeholder"}</NavLink>
           <NavLink to="/">ChatGPT(Beta)</NavLink>
           <NavLink to="/Notifications">
             <img src={logo} alt="Notifications" />
-          </NavLink> */}
+          </NavLink>  */}
         </div>
       </nav>
     </div>

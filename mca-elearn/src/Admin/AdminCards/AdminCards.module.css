@@ -1,0 +1,50 @@
+.adminCardsBody {
+  width: 80%;
+  height: 80%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 150ms ease-in-out;
+}
+.adminCardsBody:hover {
+  width: 90%;
+  height: 90%;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.adminCardContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+.adminCardImage {
+  width: calc(100vh * 10 / 100);
+  height: calc(100vh * 8 / 100);
+}
+.adminCardImage img {
+  width: calc(100vh * 7 / 100);
+  height: calc(100vh * 6 / 100);
+  object-fit: scale-down;
+  transition: 150ms ease-in-out;
+}
+
+.adminCardText {
+  margin-top: -10px;
+  margin-left: 30px;
+  color: black;
+  font-size: calc(100vh - 750px);
+  transition: 150ms ease-in-out;
+}
+.adminCardsBody a {
+  text-decoration: none;
+}
+.adminCardsBody:hover .adminCardText {
+  font-size: calc(100vh - 745px);
+  transform: translateY(10px); 
+}
+.adminCardsBody:hover .adminCardImage img {
+  
+  height: calc(100vh - 700px);
+}

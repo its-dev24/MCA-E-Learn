@@ -20,6 +20,14 @@ const getAllNotes = async (req, res) => {
   }
   res.status(200).json(notes);
 };
+//To get all Temporary Notes
+const getTempNotes = async (req, res) => {
+  const tempNote = await Temp.find({});
+  if (!tempNote) {
+    return res.status(400).json({ error: "No Notes to be shown" });
+  }
+  res.status(200).json(tempNote);
+};
 
 //To add notes
 
@@ -49,7 +57,7 @@ const createTempNote = async (req, res) => {
   const file = req.file.originalname;
   // console.log(file, title, semester, subjectCode, module);
   try {
-    const note = await Temp.create({
+    const Tempnote = await Temp.create({
       title,
       semester,
       subjectCode,
@@ -93,4 +101,5 @@ module.exports = {
   getAllSubjects,
   deleteNotes,
   createTempNote,
+  getTempNotes,
 };

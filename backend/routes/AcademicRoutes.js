@@ -8,6 +8,7 @@ const {
   getAllSubjects,
   deleteNotes,
   createTempNote,
+  getTempNotes,
 } = require(`../controllers/AcademicController`);
 
 //multer
@@ -23,6 +24,10 @@ const upload = multer({ storage });
 
 //Get all notes
 AcademicRouter.get(`/Notes`, getAllNotes);
+
+//Get all Temporary Notes
+
+AcademicRouter.get("/Tempnotes", getTempNotes);
 
 //Create notes
 

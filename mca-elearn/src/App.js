@@ -16,6 +16,8 @@ import Contributions from "./Notes/Contributions";
 import Notes from "./Notes/Notes";
 import AdminLayout from "./Admin/AdminLayout/AdminLayout";
 import AdminLogin from "./Admin/AdminLogin/AdminLogin";
+import AdminDashboard from "./Admin/AdminDashboard/AdminDashboard";
+import AdminNotes from "./Admin/AdminNotes/AdminNotes";
 
 const myRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -31,7 +33,10 @@ const myRouter = createBrowserRouter(
         />
         <Route path="/Contributions" element={<Contributions />} />
       </Route>
-      <Route path="/admin" element={<AdminLogin />}></Route>
+      <Route path="/adminhome" element={<AdminLayout />}>
+        <Route index element={<AdminDashboard />} />
+        <Route path="/adminhome/adminNotes" element={<AdminNotes />} />
+      </Route>
     </Route>
   )
 );
