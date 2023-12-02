@@ -1,0 +1,46 @@
+:root {
+  --primary-1: #2873c9;
+  --secondary-1: #ff2400;
+}
+
+.adminnavbar {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  max-width: 100%;
+  margin: auto;
+  justify-content: space-between;
+  z-index: 100;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.adminnavbar h1 {
+  color: var(--primary-1);
+  margin-left: 40px;
+}
+.adminnavbar .adminlinks {
+  margin: auto;
+  margin-right: 50px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+}
+.adminnavbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 15px;
+  padding-top: 2px;
+}
+.adminnavbar a:hover {
+  color: var(--primary-1);
+  transition: color 300ms ease-in-out;
+}
+.adminnavbar img {
+  transform: translateY(5px);
+  height: 20px;
+}
+.adminnavbar a.active {
+  background-color: var(--primary-1);
+  color: white;
+}

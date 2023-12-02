@@ -1,0 +1,54 @@
+.adminMain {
+  width: 100vw;
+  height: 100vh;
+}
+.adminLoginBox {
+  width: calc(100vw * 50 / 100);
+  display: flex;
+  flex-direction: row;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transform: translate(370px, 130px);
+  border-radius: 20px;
+}
+.adminLeft img {
+  width: calc(100vw - 1200px);
+  height: calc(100vh - 250px);
+  object-fit: cover;
+  transform: translateY(3px);
+}
+.adminRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 30px;
+}
+.adminRight input {
+  width: calc(100vw * 17 / 100);
+  margin-left: 40px;
+  height: calc(100vh * 5 / 100);
+  border: 1px solid;
+  border-color: gray;
+  border-radius: 20px;
+  padding-left: 20px;
+}
+.adminRight label {
+  position: absolute;
+  transform: translate(65px, 6px);
+}
+.adminLoginBox h2 {
+  transform: translate(20px, 30px);
+}
+.Loginbutton {
+  background-color: black;
+  width: calc(100vw * 10 / 100);
+  height: calc(100vh * 5 / 100);
+  border-radius: 10px;
+  transform: translate(20px, -40px);
+}
+.Loginbutton button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  color: white;
+}
