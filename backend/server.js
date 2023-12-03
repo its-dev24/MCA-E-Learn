@@ -12,6 +12,7 @@ app.use(cors());
 
 //set file as static
 app.use("/files", express.static("files"));
+app.use("/notifications", express.static("notifications"));
 
 //Importing Router
 
@@ -21,7 +22,7 @@ const AdminRouter = require(`./routes/AdminRoutes`);
 
 //Routing
 app.use(AcademicRouter);
-app.use( notificationRouter);
+app.use(notificationRouter);
 app.use(AdminRouter);
 
 //mongo connecting to DB and Listning

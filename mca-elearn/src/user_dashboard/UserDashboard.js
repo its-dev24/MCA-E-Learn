@@ -16,6 +16,7 @@ const UserDashboard = () => {
           <CardView
             text="NOTIFICATIONS"
             image={require("../images/notification-card.png")}
+            url="/Notifications"
           />
           <CardView
             text="CONTRIBUTIONS"

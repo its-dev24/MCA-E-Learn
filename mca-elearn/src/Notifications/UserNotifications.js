@@ -3,22 +3,14 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import List from "../List/List";
-import "./Notes.css";
-const Notes = () => {
+import "../Notes/Notes.css";
+const UserNotifications = () => {
   const [note, setNote] = useState();
-  const { semester, subjectCode, module } = useParams();
-  const fileType = "files";
-  const noteBody = {
-    semester,
-    subjectCode,
-    module,
-  };
+  const fileType = "notifications";
+
   useEffect(() => {
-    const noteParams = new URLSearchParams(noteBody);
     const fetchNotes = async (req, res) => {
-      const response = await axios.get(
-        "http://localhost:5000/Notes?" + noteParams
-      );
+      const response = await axios.get("http://localhost:5000/Notifications");
       if (response.status === 200) {
         const noteObj = response.data;
         console.log(noteObj);
@@ -35,7 +27,7 @@ const Notes = () => {
           <List
             key={index}
             title={note.title}
-            url={note.file}
+            url={note.body}
             type={fileType}
           />
         ))}
@@ -43,4 +35,4 @@ const Notes = () => {
   );
 };
 
-export default Notes;
+export default UserNotifications;
