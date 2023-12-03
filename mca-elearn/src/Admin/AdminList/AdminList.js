@@ -23,8 +23,9 @@ const AdminList = ({ title, noteDetails }) => {
     const delApi = `http://localhost:5000/TempNotes/${noteDetails._id}`;
     const response2 = await axios.delete(delApi);
   };
-  const handleCross = () => {
-    console.log("cross");
+  const handleCross = async () => {
+    const delApi = `http://localhost:5000/TempNotes/${noteDetails._id}`;
+    const response2 = await axios.delete(delApi);
   };
   return (
     <div className={AdminListCSS.adminListMain}>
