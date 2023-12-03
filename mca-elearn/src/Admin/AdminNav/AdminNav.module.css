@@ -24,13 +24,15 @@
   margin-right: 50px;
   padding-bottom: 7px;
   padding-top: 7px;
+  display: flex;
+  justify-content: space-around;
 }
 .adminnavbar a {
   margin-left: 16px;
   text-decoration: none;
   padding: 8px;
   border-radius: 15px;
-  padding-top: 2px;
+  padding-top: 5px;
   background-color: var(--primary-1);
   color: white;
 }
@@ -45,4 +47,22 @@
 .adminnavbar a.active {
   background-color: var(--primary-1);
   color: white;
+  border: none;
+}
+.adminbutton {
+  margin-left: 30px;
+  border-color: var(--primary-1);
+  transition: 150ms ease-in-out;
+}
+.adminbutton button {
+  padding: 7px;
+  border: none;
+  transition: 150ms ease-in-out;
+  color: var(--primary-1);
+  cursor: pointer;
+}
+
+.adminbutton:hover button {
+  border: 1px solid var(--primary-1);
+  border-radius: 5px;
 }
