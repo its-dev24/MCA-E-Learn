@@ -22,7 +22,7 @@ const AdminNotes = () => {
     <div className={AdminNotesCSS.adminNotesList}>
       {note &&
         note.map((note, index) => (
-          <AdminList key={index} title={note.title} url={note.file} />
+          <AdminList key={index} title={note.title} noteDetails={note} />
         ))}
     </div>
   );

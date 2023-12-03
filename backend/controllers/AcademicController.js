@@ -83,6 +83,19 @@ const deleteNotes = async (req, res) => {
   }
   res.status(200).json(notes);
 };
+//to delete Temporary Notes
+const deleteTempNotes = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res.status(404).json({ error: "Not a valid ID" });
+  }
+  const notes = await Temp.findOneAndDelete({ _id: id });
+  if (!notes) {
+    return res.status(404).json({ error: "not Such note Exist" });
+  }
+  res.status(200).json(notes);
+};
 
 //Get all Subjects
 
@@ -102,4 +115,5 @@ module.exports = {
   deleteNotes,
   createTempNote,
   getTempNotes,
+  deleteTempNotes,
 };

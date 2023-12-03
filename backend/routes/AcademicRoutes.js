@@ -9,6 +9,7 @@ const {
   deleteNotes,
   createTempNote,
   getTempNotes,
+  deleteTempNotes,
 } = require(`../controllers/AcademicController`);
 
 //multer
@@ -31,7 +32,7 @@ AcademicRouter.get("/Tempnotes", getTempNotes);
 
 //Create notes
 
-AcademicRouter.post("/Notes/", createNote);
+AcademicRouter.post("/Notes", createNote);
 
 //Create Temporary Notes
 
@@ -40,6 +41,8 @@ AcademicRouter.post("/TempNotes/", upload.single("files"), createTempNote);
 
 AcademicRouter.delete("/Notes/:id", deleteNotes);
 
+//Delete a Temp note
+AcademicRouter.delete("/TempNotes/:id", deleteTempNotes);
 //Get All Subjects
 
 AcademicRouter.get("/Subjects/:semester", getAllSubjects);
