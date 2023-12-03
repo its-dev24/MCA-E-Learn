@@ -7,7 +7,11 @@ const UserDashboard = () => {
     <div className="dashboard-main">
       <div className="contents">
         <div className="cards">
-          <CardView text="SYLLABUS" image={require("../images/syllubus.png")} />
+          <CardView
+            text="SYLLABUS"
+            image={require("../images/syllubus.png")}
+            url="/Syllubus"
+          />
           <CardView
             text="NOTES"
             image={require("../images/notes.png")}
