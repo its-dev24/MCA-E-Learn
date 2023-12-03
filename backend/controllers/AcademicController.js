@@ -50,9 +50,6 @@ const createNote = async (req, res) => {
 //To add temp notes
 
 const createTempNote = async (req, res) => {
-  // console.log(req.file);
-  // console.log(req.body);
-
   const { title, semester, subjectCode, module } = req.body;
   const file = req.file.originalname;
   // console.log(file, title, semester, subjectCode, module);

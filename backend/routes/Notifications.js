@@ -1,4 +1,16 @@
 const express = require(`express`);
+const multer = require("multer");
+
+//multer
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    return cb(null, "./notifications/");
+  },
+  filename: (req, file, cb) => {
+    return cb(null, `${file.originalname}`);
+  },
+});
+const upload = multer({ storage });
 
 const NotificationRouter = express.Router();
 const {
@@ -11,14 +23,18 @@ const {
 
 //Get all notifications
 
-NotificationRouter.get("/", getAllNotifications);
+NotificationRouter.get("/Notifications", getAllNotifications);
 
 //Add NOtifications
 
-NotificationRouter.post("/", addNotifications);
+NotificationRouter.post(
+  "/Notifications",
+  upload.single("body"),
+  addNotifications
+);
 
 //delete notifications
 
-NotificationRouter.delete("/:id", deleteNotification);
+NotificationRouter.delete("/Notifications/:id", deleteNotification);
 
 module.exports = NotificationRouter;

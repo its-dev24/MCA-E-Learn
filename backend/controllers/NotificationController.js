@@ -14,10 +14,16 @@ const getAllNotifications = async (req, res) => {
 //post notifications
 
 const addNotifications = async (req, res) => {
-  const { title, snippet, body } = req.body;
+  const { title, snippet } = req.body;
+  console.log(req.file.originalname);
+  const body = req.file.originalname;
+  console.log(`body${body}`);
+  console.log(title);
+  console.log(snippet);
   try {
-    const note = await Notification.create({ title, snippet, body });
-    res.status(200).json(note);
+    const notification = await Notification.create({ title, snippet, body });
+
+    res.status(200).json(notification);
   } catch (err) {
     res.json(err);
   }

@@ -13,7 +13,11 @@ const AdminDashboard = () => {
         </div>
         <div className={AdminDashCSS.adminCards}>
           <div className={AdminDashCSS.adminNotification}>
-            <AdminCards text="NOTIFICATIONS" image={notifiImg} />
+            <AdminCards
+              text="NOTIFICATIONS"
+              image={notifiImg}
+              url={"/adminhome/adminNotification"}
+            />
           </div>
           <div className={AdminDashCSS.adminNotes}>
             <AdminCards

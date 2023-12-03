@@ -21,7 +21,7 @@ const AdminRouter = require(`./routes/AdminRoutes`);
 
 //Routing
 app.use(AcademicRouter);
-app.use(`/Notifications`, notificationRouter);
+app.use( notificationRouter);
 app.use(AdminRouter);
 
 //mongo connecting to DB and Listning

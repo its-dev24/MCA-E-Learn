@@ -1,0 +1,92 @@
+.adminNotificationMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.adminNotificationContents {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 800px;
+  height: 620px;
+  border-radius: 50px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.adminElement input,
+.adminElement select {
+  width: calc(100vh - 500px);
+  height: calc(100vh - 740px);
+
+  border-radius: 5px;
+  background: rgb(249, 250, 250);
+  border: 1px solid rgb(181, 189, 196);
+  font-size: 16px;
+
+  line-height: 24px;
+  padding: 7px 8px;
+  color: rgb(8, 9, 10);
+  box-shadow: none;
+  :focus {
+    background-color: #fff;
+    border-color: #3b49df;
+    box-shadow: 1px 1px 0 #3b49df;
+  }
+}
+.adminElement select {
+  height: 40px;
+  width: 283px;
+}
+.adminElement {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.adminElement label {
+  margin-right: 100px;
+}
+input[type="file"]::file-selector-button {
+  border: none;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #a29bfe;
+  transition: 1s;
+  width: calc(100vh - 650px);
+  height: calc(100vh - 740px);
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+.adminButtonSubmit {
+  height: 60px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(130px);
+}
+.adminButtonSubmit button {
+  height: 40px;
+  width: 100px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+}
+.adminElement button:hover {
+  height: 45px;
+  width: 105px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-image: linear-gradient(
+    to right,
+    #84fab0 0%,
+    #8fd3f4 51%,
+    #84fab0 100%
+  );
+}
