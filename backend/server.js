@@ -27,7 +27,9 @@ app.use(AdminRouter);
 
 //mongo connecting to DB and Listning
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(
+    "mongodb+srv://Gautham24:Gautham24@mcaelearn.p3igebl.mongodb.net/?retryWrites=true&w=majority&appName=MCAELearn"
+  )
   .then((result) => {
     app.listen(process.env.PORT, () => {
       console.log(`Listning to port ${process.env.PORT}`);
